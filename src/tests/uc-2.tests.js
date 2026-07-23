@@ -1,9 +1,3 @@
-// UC-2 Handling Latency (Wait Strategies):
-// o Login using performance_glitch_user (This user has a built-in delay).
-// o Ensure your framework handles the page load delay gracefully without hard-coded pause() or sleep()commands.
-// o Reset the App State via the Burger Menu.
-// o Logout.
-
 describe('UC-2 Handling Latency (Wait Strategies)', () => {
     beforeEach(async () => {
          await browser.url('/');
