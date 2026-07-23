@@ -51,10 +51,14 @@ export const config = {
     //
     capabilities: [
         {
-        browserName: 'firefox'
+            maxInstances: 1,
+            browserName: 'firefox',
+            acceptInsecureCerts: true,
         },
         {
-        browserName: 'MicrosoftEdge'
+            maxInstances: 1,
+            browserName: 'MicrosoftEdge',
+            acceptInsecureCerts: true,
         }
     ],
 
@@ -96,10 +100,10 @@ export const config = {
     //
     // Default timeout in milliseconds for request
     // if browser driver or grid doesn't send response
-    connectionRetryTimeout: 120000,
+    connectionRetryTimeout: 90000,
     //
     // Default request retries count
-    connectionRetryCount: 3,
+    connectionRetryCount: 1,
     //
     // Test runner services
     // Services take over a specific job you don't want to take care of. They enhance
