@@ -43,7 +43,7 @@ export const config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 2,
+    maxInstances: 4,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
@@ -51,12 +51,12 @@ export const config = {
     //
     capabilities: [
         {
-            maxInstances: 1,
+            maxInstances: 2,
             browserName: 'firefox',
             acceptInsecureCerts: true,
         },
         {
-            maxInstances: 1,
+            maxInstances: 2,
             browserName: 'MicrosoftEdge',
             acceptInsecureCerts: true,
         }
@@ -235,8 +235,9 @@ export const config = {
      * @param {boolean} result.passed    true if test has passed, otherwise false
      * @param {object}  result.retries   information about spec related retries, e.g. `{ attempts: 0, limit: 0 }`
      */
-    // afterTest: function(test, context, { error, result, duration, passed, retries }) {
-    // },
+    afterTest: async function(test, context, { error, result, duration, passed, retries }) {
+        await browser.pause(500);
+    },
 
 
     /**
