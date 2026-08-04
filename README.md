@@ -28,7 +28,7 @@ Documentation: Add a README.md explaining how to run the tests and generate the 
 
 *   **Automation Framework:** WebdriverIO
 *   **Test Framework:** Mocha (BDD style)
-*   **Reporter:** Spec Reporter
+*   **Reporters:** Spec Reporter and Allure reporter
 
 # 🚀 Getting Started
 
@@ -43,4 +43,9 @@ npm install
 
 ```bash
 npm test
+```
+## 2. How to get Allure report
+
+```bash
+npx allure generate --clean ; npx allure open
 ```

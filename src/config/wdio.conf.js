@@ -1,8 +1,8 @@
-export const config = {
+exports.config = {
     runner: 'local',
 
     specs: [
-        './../tests/**/*.tests.js'
+        '../tests/**/*.tests.js'
     ],
 
     maxInstances: 4,
@@ -34,7 +34,14 @@ export const config = {
 
     framework: 'mocha',
 
-    reporters: ['spec'],
+    reporters: ['spec',
+      ['allure', {
+        outputDir: 'allure-results',
+        disableWebdriverStepsReporting: true,
+        disableWebdriverScreenshotsReporting: true,
+        }
+      ]
+    ],
 
     mochaOpts: {
         ui: 'bdd',

@@ -1,14 +1,22 @@
 {
   "name": "saucedemo",
   "version": "0.0.1",
+  "type": "commonjs",
   "description": "Negative & Edge Case Flow",
   "devDependencies": {
     "@wdio/cli": "^9.30.0",
     "@wdio/local-runner": "^9.30.0",
     "@wdio/mocha-framework": "^9.30.0",
-    "@wdio/spec-reporter": "^9.29.1"
+    "@wdio/spec-reporter": "^9.29.1",
+    "@wdio/allure-reporter": "^9.30.0",
+    "allure-commandline": "2.43.0"
   },
   "scripts": {
     "test": "wdio run ./src/config/wdio.conf.js"
+  },
+  "allowScripts": {
+    "edgedriver@6.3.0": true,
+    "esbuild@0.28.1": true,
+    "geckodriver@6.1.1": true
   }
 }
