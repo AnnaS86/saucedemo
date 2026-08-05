@@ -1,6 +1,10 @@
+const LoginPage = require('./../po/pages/login.page');
+
+const loginPage = new LoginPage();
+
 describe('UC-2 Handling Latency (Wait Strategies)', () => {
     beforeEach(async () => {
-         await browser.url('/');
+         await loginPage.open();
          await $('input[data-test="username"]').setValue('');
          await $('input[data-test="password"]').setValue('');
     });
@@ -22,6 +26,6 @@ describe('UC-2 Handling Latency (Wait Strategies)', () => {
         await $('a[data-test="logout-sidebar-link"]').click();
         //Form is Visible
         const loginForm = await $('div[data-test="login-container"]');
-        await expect(loginForm).toBeDisplayed();
+        await expect(loginPage.loginForm.rootEl).toBeDisplayed();
     });
 });
