@@ -44,8 +44,7 @@ npm install
 ```bash
 npm test
 ```
-## 2. How to get Allure report
+## 2. How to view the Allure report
 
-```bash
-npx allure generate --clean ; npx allure open
-```
+> You don't need to do anything.
+> The report will open automatically right after the tests finish.

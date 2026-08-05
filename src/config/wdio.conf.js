@@ -37,6 +37,7 @@ exports.config = {
     reporters: ['spec',
       ['allure', {
         outputDir: 'allure-results',
+        cleanOnStart: true,
         disableWebdriverStepsReporting: true,
         disableWebdriverScreenshotsReporting: true,
         }
