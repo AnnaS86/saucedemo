@@ -1,4 +1,4 @@
-const LoginFormComponent = require('./../components/login-form.component');
+const LoginFormComponent = require('./../components/login/login-form.component');
 
 class LoginPage {
     constructor() {
