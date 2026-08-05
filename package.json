@@ -14,7 +14,8 @@
   },
   "scripts": {
     "clean": "rimraf allure-results allure-report",
-    "test": "npm run clean && wdio run ./src/config/wdio.conf.js && npx allure serve allure-results"
+    "test": "npm run clean && wdio run ./src/config/wdio.conf.js",
+    "dev": "npm run test && npx allure serve allure-results"
   },
   "allowScripts": {
     "edgedriver@6.3.0": true,

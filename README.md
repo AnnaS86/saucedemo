@@ -41,10 +41,15 @@ npm install
 
 ## 2. How to Run Tests
 
+> To just run the tests (console execution)
+
 ```bash
 npm test
 ```
-## 2. How to view the Allure report
 
-> You don't need to do anything.
-> The report will open automatically right after the tests finish.
+> To run the tests and automatically open the Allure report in a browser
+
+```bash
+npm run dev
+```
+  _Note: To stop the local Allure server and free up the terminal, press **Ctrl + C**._
