@@ -1,6 +1,7 @@
-class HeaderComponent {
-    get rootEl() {
-        return $('div[data-test="primary-header"]');
+const BaseComponent = require('./base.component');
+class HeaderComponent extends BaseComponent {
+    constructor() {
+        super('div[data-test="primary-header"]');
     }
 
     get burgerButton() {

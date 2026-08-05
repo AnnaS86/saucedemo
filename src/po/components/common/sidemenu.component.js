@@ -1,6 +1,7 @@
-class SideMenuComponent {
-    get rootEl() {
-        return $('.bm-menu-wrap');
+const BaseComponent = require('./base.component');
+class SideMenuComponent extends BaseComponent {
+    constructor() {
+        super('.bm-menu-wrap');
     }
 
     item(param) {

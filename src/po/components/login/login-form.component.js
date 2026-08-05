@@ -1,7 +1,7 @@
-class LoginFormComponent {
-
-    get rootEl() {
-        return $('.login-box');
+const BaseComponent = require('./../common/base.component');
+class LoginFormComponent extends BaseComponent {
+    constructor() {
+        super('.login-box');
     }
 
     get usernameInput() {
